@@ -3,11 +3,14 @@ title: 使用 Hexo+GitHub 搭建个人博客
 date: 2018-11-28 15:36:06
 tags: hexo
 categories: 
+photos: 
+- https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo+github.png?raw=true
+- 零成本搭建个人博客
 ---
 
-> 昨天偶然看见一篇有关使用Hexo搭建个人博客的文章。今天使用的一天的时间在GitHub上搭建了一个个人博客，感觉还不错，分享给大家，并记录下我搭建过程中趟过的坑
+> 昨天偶然看见一篇有关使用Hexo搭建个人博客的文章，瞬间吸引我的注意。今天使用的一天的时间在GitHub上搭建了一个个人博客，感觉还不错，分享给大家，并记录下我搭建过程中趟过的坑
 >
-> 环境：Win10
+> 环境：Win10 + Hexo + GitHub
 >
 > 效果展示：<a href="https://xiongtianci-tc.github.io/">脚印的博客</a>
 
@@ -31,7 +34,7 @@ Hexo基于Node.js环境，那么我们搭建博客网站首先需要安装Node.j
 
 测试安装：命令行使用 `node -v` 、`npm -v`，查看显示版本号即成功。如下图：
 
-![1543458424692](img/1543458424692.png) 
+![1543458424692](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543458424692.png?raw=true) 
 
 
 
@@ -58,13 +61,13 @@ Hexo基于Node.js环境，那么我们搭建博客网站首先需要安装Node.j
 
   测试安装：`git --version`，查看显示版本号即成功。如下图：
 
-  ![1543458907014](img/1543458907014.png) 
+  ![1543458907014](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543458907014.png?raw=true) 
 
 - 配置SSH：https://blog.csdn.net/qq_35246620/article/details/69061355
 
   SSH key添加之后，就可以在本机git bash中进行测试，输入`ssh -T git@github.com`进行测试
 
-  ![1543476938196](img/1543476938196.png) 
+  ![1543476938196](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543476938196.png?raw=true) 
 
   显示 `Hi username ！You've successfully...` 说明ssh配置成功了
 
@@ -90,7 +93,7 @@ npm install hexo --save
 
 这个时候你会看到命令行出现了一堆白字，紧接着输入`hexo v`查看是否安装成功：
 
-![1543477381834](img/1543477381834.png) 
+![1543477381834](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543477381834.png?raw=true) 
 
 此时，Hexo已经安装完成
 
@@ -102,7 +105,7 @@ npm install hexo --save
 
 搭建我们的个人博客需要一个唯一的域名，当然我们可以申请购买一个域名来使用，但是在不是太必要的情况下，我们也可以通过Github Pages获得一个免费使用的域名，这需要我们在Github上新建一个仓库，如下：
 
-![1543474709681](img/1543474709681.png)
+![1543474709681](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543474709681.png?raw=true)
 
 这个过程和建立普通的仓库没什么区别，关键在于新仓库的名字，一定要是：
 
@@ -112,21 +115,21 @@ npm install hexo --save
 
 点击`Create Repository`后，选着仓库的`Setting`进入设置
 
-![1543476148226](img/1543476148226.png)
+![1543476148226](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543476148226.png?raw=true)
 
 
 
 往下滑找到 `Github Pages` 如下：
 
-![1543477847990](img/1543477847990.png)
+![1543477847990](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543477847990.png?raw=true)
 
 这里我们需要点击 `Choose a theme` 任意选择一个选择主题，然后界面会跳转到仓库，我们看到有两个文件如下：
 
-![1543477980475](img/1543477980475.png)
+![1543477980475](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543477980475.png?raw=true)
 
 点击 `Select theme` 选着主题后，此时若再查看setting，我们会看到开启GitHub Pages之后得到的域名如下：
 
-![1543478176563](img/1543478176563.png)
+![1543478176563](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543478176563.png?raw=true)
 
 输入你的 GitHub 的用户名和密码，成功后复制`https://username.github.io/`到浏览器打开就行。看！这就是你的博客了，只要能连接到互联网，就能随时查看它(๑•̀ㅂ•́)و✧！
 
@@ -154,12 +157,12 @@ npm install hexo --save
 在本地我们已经搭建了博客，但是还只能自己本地访问。若要别人也能看到，那就需要我们将其同步部署到GitHub上了。还记得我们之前准备的Github仓库吗，这里就要用到了。
 首先找到我们的博客仓库，并拷贝仓库地址：
 
-![1543480461386](img/1543480461386.png)
+![1543480461386](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543480461386.png?raw=true)
 
 然后修改本地博客目录的配置：
 修改本地博客根目录下的`_config.yml`文件，修改`deploy`下的配置，如下：
 
-![1543480729831](img/1543480729831.png)
+![1543480729831](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543480729831.png?raw=true)
 
 ```
 deploy:
@@ -196,13 +199,13 @@ hexo g   //生成网页
 hexo d  //部署到远端(github)
 ```
 
-![1543481316715](img/1543481316715.png) 
+![1543481316715](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543481316715.png?raw=true) 
 
-![1543481394185](img/1543481394185.png) 
+![1543481394185](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543481394185.png?raw=true) 
 
 现在打开我们的博客网站：`http://UserName.github.io`,会看到网页如下(可能需要刷新几次页面)：
 
-![1543483567301](img/1543483567301.png)
+![1543483567301](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543483567301.png?raw=true)
 
 需要编写博客内容时，只需编写本地博客的 `_posts` 的博客原文，然后通过 `hexo g && hexo d` 重新部署到github即可
 
@@ -226,7 +229,7 @@ $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/ne
 
 下载成之后我们会看到next的主题已经存在 `thems` 里了如下：
 
-![1543484274020](img/1543484274020.png) 
+![1543484274020](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543484274020.png?raw=true) 
 
 
 
@@ -234,7 +237,7 @@ $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/ne
 
 修改博客根目录(不是next主题)下的 `_config.yml` 文件，搜索 `theme` 字段，并将其值修改为 `next`
 
-![1543484383922](img/1543484383922.png) 
+![1543484383922](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543484383922.png?raw=true) 
 
 然后在控制台下输入如下命令：
 
@@ -259,7 +262,7 @@ hexo d   //部署到本地
 
 在本地的博客根目录下找到_config.yml，用编辑器打开进行内容的设置，如下：
 
-![1543485321688](img/1543485321688.png)
+![1543485321688](https://github.com/xiongtianci-tc/myHexoBlog/blob/master/img/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1543485321688.png?raw=true)
 
 这里可以修改博客网站的标题、描述，语言等属性
 
